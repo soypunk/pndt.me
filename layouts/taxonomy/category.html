@@ -2,14 +2,7 @@
   {{ .Title | singularize }} Archives - {{ .Site.Title }}
 {{ end }}
 {{ define "main" }}
-  <h2>{{ .Title | singularize }} Archives</h2>
-		
-	{{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
-	<section>
-	<h3>{{ $taxonomyname | humanize }}</h3>
-	<p>{{ $.Scratch.Set "count" 1 }}{{ range $key, $value := $taxonomy }}{{ if ne ($.Scratch.Get "count") 1 }}, {{end}}<a href="{{ "/categories/" | relLangURL }}{{ $key | urlize }}">{{ $key | humanize }}</a></li>{{ $.Scratch.Add "count" 1 }}{{ end }}</p>
-	</section>
-	{{ end }}
+  <h2><a href="{{ "/categories/" | relLangURL }}">Category</a>: {{ .Title }}</h2>
 
   {{ range .Data.Pages.GroupByDate "2006" }}
   <h3>{{ .Key }}</h3>

@@ -42,7 +42,7 @@ body { width: 87.5%;
 	   -webkit-text-size-adjust: none;
 	   -ms-overflow-style: scrollbar; }
 
-h1, h2, h3, th {
+h1, h2, h3, th, .taxonomy-term {
 	color: #f06862;
 }
 
@@ -108,7 +108,7 @@ body > footer { padding-top: 1rem;
 
 p, ol, ul { font-size: 1.4rem; }
 
-p, time { line-height: 2rem;
+p, time, table.post-archives { line-height: 2rem;
     margin-top: 1.4rem;
     margin-bottom: 1.4rem;
     padding-right: 0;
@@ -285,25 +285,39 @@ label.margin-toggle:not(.sidenote-number) { display: none; }
 	 font-size: 1.2rem; 
 	 color: #aaa; }
 
+.single .item-title {
+	margin-bottom: 0; }
+
 #footer,
 .meta {
-	color: #aaa;
-}
+	color: #aaa; }
 
+.categories a:link {
+	background: none;
+	text-shadow: none; }
+
+.categories .category:after {
+    content: ", "; }
+
+.categories .category:last-child:after {
+    content: ""; }
+
+table.post-archives {
+	width: auto; }
+
+table.post-archives td {
+	list-style: none; }
+	
 table.post-archives tr th {
 	padding: 0 1.75em 0 0;
 	vertical-align: baseline;
-	text-align: right;
-}
+	text-align: right; }
 
-table.post-archives tr td {
-
-}
+table.post-archives tr td { }
 
 .center {
 	text-align: center;
-	clear: both
-}
+	clear: both; }
 
 .section-sign:before {
 	content: '\00A7'

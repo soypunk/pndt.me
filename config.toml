@@ -4,6 +4,9 @@ languageCode = "en-us"
 
 [author]
     name = "Shawn Medero"
-    
+
 [permalinks]
 	post = "/:year/:month/:day/:slug"
+	
+[taxonomies]
+	category = "categories"
