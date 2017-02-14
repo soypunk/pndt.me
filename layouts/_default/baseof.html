@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<base href="{{ .Site.BaseURL }}">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+		<link rel="canonical" href="{{ .Permalink }}">
+		{{ if .RSSlink }}<link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}" />{{ end }}
+		<link rel="stylesheet" href="/assets/css/main.css" />
+		<link rel="stylesheet" href="/assets/css/fonts.css" media="none" onload="if(media!='all')media='all'">
+	</head>
+	<body>
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+						
+						<!-- Header -->
+							<header id="header" class="sans">
+								<h1 class="logo"><a href="{{ .Site.BaseURL }}"><strong>{{ .Site.Title }}</strong></a></h1>
+								{{ with .Site.Author.name }}<p class="subtitle"> by {{ . }}</p>{{ end }}
+							</header>
+						
+						<!-- Content -->
+							<section role="main">
+								{{ block "main" . }}{{ end }}						
+							</section>
+							
+						<!-- Footer -->		
+							<footer id="footer" class="sans">
+								<hr class="ornament">
+								<ul class="icons">
+									<li><a href="/post/" class="icon fa-archive" title="Archives"><span class="label">Archives</span></a></li>
+									<li><a href="https://twitter.com/soypunk" class="icon fa-twitter" title="Twitter"><span class="label">Twitter</span></a></li>
+								</ul>
+								{{ $post_edition := .Site.LastChange.Format "PM-3" }}
+								<p><small class="copyright">© {{.Now.Format "2006"}} Shawn Medero.</small> <small><span class="edition {{ $post_edition }}-edition" title="Last published on {{ .Site.LastChange.Format "Monday, January 2, 2006 3:04 PM" }}"></span></small></p>
+							</footer>
+							
+						</div>
+					</div>	
+	
+			</div>
+	</body>
+</html>

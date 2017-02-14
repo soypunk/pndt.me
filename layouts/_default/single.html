@@ -1,0 +1,12 @@
+{{ define "title" }}
+  {{ .Title }} - {{ .Site.Title }}
+{{ end }}
+{{ define "main" }}
+<article>
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+  
+  <hr>  
+  <p>A collection of all {{ .Section | pluralize }} can be found in the <a href="/post/">{{ .Section | humanize }} Archives</a></p>
+</article>  
+{{ end }}

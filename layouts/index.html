@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+    {{ range first 10 .Data.Pages }}
+    <article class="item post">
+    	<header>
+			<h2 class="item-title post-title"><a href="{{ .Permalink }}" rel="bookmark">{{ .Title }}</a></h2>
+			<div class="meta sans">
+				<time datetime="{{ .Date.Format "2006-01-02T15:04:05-0700" }}" pubdate>Published {{ .Date.Format "Monday, January 2, 2006 3:04 PM"}}</time>
+			</div>
+		</header> 
+		{{ .Content }}
+    </article>
+    {{ end }}
+
+  	<p class="center">A collection of all posts can be found in the <a href="/post/">Archives</a></p>
+	<p class="center section-sign"></p>
+  	
+{{ end }}

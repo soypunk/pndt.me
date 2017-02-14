@@ -1,0 +1,9 @@
+title = "PNDT"
+baseurl = "https://pndt.me/"
+languageCode = "en-us"
+
+[author]
+    name = "Shawn Medero"
+    
+[permalinks]
+	post = "/:year/:month/:day/:slug"

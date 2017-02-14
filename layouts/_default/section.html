@@ -1,0 +1,30 @@
+{{ define "title" }}
+  {{ .Title | singularize }} Archives - {{ .Site.Title }}
+{{ end }}
+{{ define "main" }}
+  <h2>{{ .Title | singularize }} Archives</h2>
+
+  {{ range .Data.Pages.GroupByDate "2006" }}
+  <h3>{{ .Key }}</h3>
+  <table class="post-archives">
+  {{ range .Pages.GroupByDate "January 2006" }}
+	  <tr>
+		  <th>{{ delimit (split .Key " " | first 1) "" }}</th>
+		  <td></td>		
+	  </tr>
+	  {{ range .Pages.GroupByDate "2006-01-02" }}
+	  <tr>
+		  <th>{{ .Key | dateFormat "2" }}</th>
+		  <td>
+		  {{ range .Pages }}
+			  <a href="{{ .Permalink }}" rel="bookmark">{{ .Title }}</a><br>
+		  {{ end }}
+		  </td>
+	  </tr>
+	  {{ end }}
+  {{ end }}
+  </table>
+  {{ end }}
+
+  <p class="center section-sign"></p>
+{{ end }}
