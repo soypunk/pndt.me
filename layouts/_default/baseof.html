@@ -3,8 +3,10 @@
 	<head>
 		<meta charset="utf-8">
 		<base href="{{ .Site.BaseURL }}">
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 		<title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+		<meta property="og:site_name" content="{{ .Site.Title }}">
+		<meta property="og:url" content="{{ .Site.BaseURL }}">
 		<link rel="canonical" href="{{ .Permalink }}">
 		{{ if .RSSLink }}<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}" />{{ end }}
 		<link rel="stylesheet" href="/assets/css/main.css" />
