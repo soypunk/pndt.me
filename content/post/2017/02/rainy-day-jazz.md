@@ -6,7 +6,7 @@ categories:
     - Music
 ---
 
-Part of [documenting my Reading List library][2] will include going through 100s of items that have I've been queuing up over the last several years. Kinda like wading into an old person's house and seeing years worth of newspapers stacked up everywhere -- something I'm familiar with since that was the scene I found after I visited my grandfather at his house some time ago. 
+Part of [documenting my Reading List library][2] will include going through 100s of items that I've been queuing up over the last several years. Kinda like wading into an old person's house and seeing years worth of newspapers stacked up everywhere -- something I'm familiar with since that was the scene I found after I visited my grandfather at his house some time ago. 
 
 Seeing as I'm fond of having good writing music this collection of "rainy day jazz" tunes from Reddit's Jazz subreddit seems appropriate. The top voted post is a good starting point for making your own collection. To help you out I've collected 48 of the songs into a public [Apple Music playlist][9].
 
