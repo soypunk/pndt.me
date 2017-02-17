@@ -1,5 +1,5 @@
 ---
-title: "Kanban is Not Rocket Science"
+title: "Kanban Is Not Rocket Science"
 date: 2017-02-16 21:23:00 -0800
 draft: false
 categories:
