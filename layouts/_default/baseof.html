@@ -39,7 +39,7 @@
 									<li><a href="https://twitter.com/soypunk" class="icon fa-twitter" title="Twitter"><span class="label">Twitter</span></a></li>
 								</ul>
 								{{ $post_edition := .Site.LastChange.Format "PM-3" }}
-								<p><small class="copyright">© {{.Now.Format "2006"}} Shawn Medero.</small> <small><span class="edition {{ $post_edition }}-edition" title="Last published on {{ .Site.LastChange.Format "Monday, January 2, 2006 3:04 PM" }}"></span></small></p>
+								<p><small class="copyright">© {{now.Format "2006"}} Shawn Medero.</small> <small><span class="edition {{ $post_edition }}-edition" title="Last published on {{ .Site.LastChange.Format "Monday, January 2, 2006 3:04 PM" }}"></span></small></p>
 							</footer>
 							
 						</div>
